@@ -17,7 +17,9 @@
 
 let activeVueTools = () => {
     // Find Vue 2
-    let app = Array.from(document.querySelectorAll("*")).find((e) => e.__vue__).__vue__;
+    let app = Array.from(document.querySelectorAll("*")).find(
+        (e) => e.__vue__
+    ).__vue__;
 
     if (app) {
         // Enable VueDevTools config
@@ -41,7 +43,9 @@ let activeVueTools = () => {
 
     // Find Vue 3
     if (app === undefined || app === null) {
-        app = Array.from(document.querySelectorAll("*")).find((e) => e.__vue_app__).__vue_app__;
+        app = Array.from(document.querySelectorAll("*")).find(
+            (e) => e.__vue_app__
+        ).__vue_app__;
 
         if (app === undefined || app === null) return;
     }

@@ -14,23 +14,19 @@
 // ==/UserScript==
 
 let createCookie = () => {
-    if (document.cookie.includes("ws_style=Tomorrow")) {
-
-    } else {
+    if (!document.cookie.includes("ws_style=Tomorrow"))
         document.cookie = "ws_style=Tomorrow";
-    }
     // Sometimes it alternates between "nws" and "ws" preventing the color scheme to take effect
-    if (document.cookie.includes("nws_style=Tomorrow")) {
-
-    } else {
+    if (!document.cookie.includes("nws_style=Tomorrow"))
         document.cookie = "nws_style=Tomorrow";
-    }
 };
 
 let createLocalStorageItem = () => {
     if (localStorage.getItem("4chan-settings")) return;
 
-    localStorage.setItem("4chan-settings", `
+    localStorage.setItem(
+        "4chan-settings",
+        `
         {
             "quotePreview"          :true,
             "backlinks"             :true,
@@ -77,7 +73,8 @@ let createLocalStorageItem = () => {
             "customMenu"            :false,
             "imageHoverBg"          :false
         }
-    `);
+    `
+    );
 };
 
 createCookie();

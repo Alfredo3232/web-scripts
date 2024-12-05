@@ -1,6 +1,6 @@
-# webScripts
+# Web Scripts
 
-This a collection of my personal webScripts using a web browser extension called ViolentMonkey similar to TamperMonkey or FireMonkey.
+This a collection of my personal Web Scripts using a web browser extension called ViolentMonkey similar to TamperMonkey or FireMonkey.
 Feel free to adjust my scripts to your liking.
 
 ## Explanation
